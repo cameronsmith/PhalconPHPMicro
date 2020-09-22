@@ -1,0 +1,44 @@
+{
+  "name": "cameronsmith/phalcon-php-micro",
+  "description": "An example project built with the phalcon php micro application",
+  "keywords": [
+    "phalcon php micro",
+    "phalcon php",
+    "phalcon",
+    "cameronsmith"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Cameron Smith"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-psr": "*",
+    "ext-zip": "*",
+    "ext-phalcon": "^4.0"
+  },
+  "repositories": [
+
+  ],
+  "support": {
+    "source": "https://github.com/cameronsmith/LearningPhalconPHP"
+  },
+  "autoload": {
+    "psr-4": {
+      "CameronSmith\\LearningPhalconPHP\\": "app/",
+      "CameronSmith\\LearningPhalconPHP\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "phpcs": "docker exec -t phalcon-micro-php-fpm ./vendor/bin/phpcs"
+  },
+  "version": "0.0.1",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.5",
+    "phalcon/devtools": "~4.0"
+  }
+}

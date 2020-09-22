@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+  nginx:
+    container_name: phalcon-micro-php-nginx
+    user: ${CURRENT_UID}
+    build:
+      context: .
+      dockerfile: .docker/docker-nginx.dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - phalcon-micro-php-network
+    links:
+      - php
+      - db
+
+  php:
+      container_name: phalcon-micro-php-fpm
+      image: php:7.2-fpm
+      user: ${CURRENT_UID}
+      volumes:
+        - .:/usr/share/nginx/html
+      networks:
+        - phalcon-micro-php-network
+      build:
+        context: .
+        dockerfile: .docker/docker-php.dockerfile
+  db:
+      container_name: phalcon-micro-php-db
+      image: mysql:8
+      user: ${CURRENT_UID}
+      command: --default-authentication-plugin=mysql_native_password
+      env_file:
+        - .env
+      environment:
+        - MYSQL_HOST=localhost
+        - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+        - MYSQL_DATABASE=${DB_DATABASE}
+        - MYSQL_USER=${DB_USER}
+        - MYSQL_PASSWORD=${DB_PASSWORD}
+      networks:
+        - phalcon-micro-php-network
+networks:
+  phalcon-micro-php-network:
+    driver: bridge

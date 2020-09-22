@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Project">
+    <description>Project Coding Standard</description>
+    <arg name="colors"/>
+    <arg value="sp"/>
+
+    <rule ref="PSR2"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName" />
+    <rule ref="Squiz.Commenting.FunctionComment.Missing" />
+    <rule ref="Squiz.Commenting.FunctionComment.MissingParamTag" />
+    <rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+    <rule ref="Squiz.Commenting.ClassComment.Missing" />
+
+    <exclude-pattern>/app/migrations/*</exclude-pattern>
+    <exclude-pattern>/app/config/*</exclude-pattern>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/tests/*</exclude-pattern>
+    <file>.</file>
+</ruleset>
