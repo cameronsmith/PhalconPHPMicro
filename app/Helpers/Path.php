@@ -1,4 +1,4 @@
-<?php namespace CameronSmith\LearningPhalconPHP\Helpers;
+<?php namespace CameronSmith\PhalconPHPMicro\Helpers;
 
 /**
  * Class Path

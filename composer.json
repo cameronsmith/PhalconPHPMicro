@@ -25,12 +25,12 @@
 
   ],
   "support": {
-    "source": "https://github.com/cameronsmith/LearningPhalconPHP"
+    "source": "https://github.com/cameronsmith/PhalconPHPMicro"
   },
   "autoload": {
     "psr-4": {
-      "CameronSmith\\LearningPhalconPHP\\": "app/",
-      "CameronSmith\\LearningPhalconPHP\\Test\\": "tests/"
+      "CameronSmith\\PhalconPHPMicro\\": "app/",
+      "CameronSmith\\PhalconPHPMicro\\Test\\": "tests/"
     }
   },
   "scripts": {
