@@ -1,6 +1,6 @@
 <?php
 
-use CameronSmith\LearningPhalconPHP\Helpers\Path;
+use CameronSmith\PhalconPHPMicro\Helpers\Path;
 use Phalcon\Config;
 
 return new Config([
