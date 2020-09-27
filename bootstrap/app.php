@@ -11,7 +11,7 @@ $application = new Micro();
 /**
  * Attach Routes.
  */
-$routes = require_once (Path::getRootPath() . '/routes/api.php');
+$routes = require_once(Path::getRootPath() . '/routes/api.php');
 $application = $routes($application);
 
 return $application;

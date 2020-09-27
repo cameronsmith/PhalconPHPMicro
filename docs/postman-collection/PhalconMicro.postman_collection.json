@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PhalconMicro",
+		"_postman_id": "9aefda8e-908d-b08f-f78f-0a3e5cb7131d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Cameron Smith\",\n\t\"email\": \"cameron@cameron.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
